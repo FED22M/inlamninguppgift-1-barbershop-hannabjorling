@@ -1,78 +1,110 @@
-header {
-    background-color: #000;
+    /* PRIMARY */
+    $gold-color: rgb(191, 146, 91);
+    $dark-color: rgb(20, 27, 37);
+    $beige-color: rgb(235, 232, 222);
 
-    .navbar {
-        padding: 10px 0;
-        border: 2px dashed #0d0c0d;
+    /* MIXIN'S */
+    @mixin center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-        .nav_container {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: row;
-            align-items: center;
-            width: 100%;
-            background-color: #0d0c0d;
+    header {
+        background-color: #000;
 
-            .header_logo {
-                a {
-                    margin-left: 15px;
-                    color: #fff;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-family: 'Barlow Semi Condensed', sans-serif;
-                    font-size: 2rem;
-                    font-weight: 600;
-                }
-            }
+        .navbar {
+            padding: 8px 0;
+            border: 2px dashed #0d0c0d;
 
-            .menu {
+            .nav_container {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+                align-items: center;
                 width: 100%;
-                margin-right: 15px;
-                color: #fff;
-                opacity: 70%;
-                text-transform: uppercase;
-                text-align: end;
-            }
+                background-color: #0d0c0d;
 
-            .navbar_items {
-                ul {
-                    display: none;
+                .header_logo {
+                    a {
+                        margin: 0 0 0 15px;
+                        color: #fff;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-family: 'Barlow Semi Condensed', sans-serif;
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+                }
+
+                .menu {
+                    width: 100%;
+                    margin: 0 15px 0 0;
+                    text-align: end;
+                    color: #fff;
+                    opacity: 70%;
+                    font-size: 1.3rem;
+                    text-transform: uppercase;
+                }
+
+                .navbar_items {
+                    ul {
+                        display: none;
+                    }
                 }
             }
         }
-    }
 
-    .header_main {
-
-        .header_container {
-            height: (640-81px);
-            width: 90%;
+        .header_main {
             background: no-repeat center url("/img/header.jpg");
             background-size: cover;
             text-transform: uppercase;
-            padding: 20px;
+            width: 100%;
 
-            :first-child {
-                color: $gold-color;
-                font-size: 1.2em;
-            }
+            .header_container {
+                display: flex;
+                flex-direction: column;
+                height: 90vh;
+                justify-content: center;
+                padding: 0 15px;
 
-            h1 {
-                color: #fff;
-                font-size: 2.8rem;
-            }
+                :first-child {
+                    margin: 160px 0 0 0;
+                    color: $gold-color;
+                    font-weight: 600;
+                    font-size: 1.3em;
+                }
 
-            :nth-child(3) {
-                text-transform: none;
-                color: #fff;
-            }
+                h1,
+                .outline {
+                    margin: 0 0 20px 0;
+                    color: #fff;
+                    /* fallback */
+                    font-size: 2.9rem;
 
-            .about_btn {
-                text-decoration: none;
-                color: $gold-color;
-                font-weight: 700;
-                border: 2px solid white;
+                    .outline {
+                        -webkit-text-fill-color: transparent;
+                        -webkit-text-stroke-width: 1px;
+                    }
+                }
+
+                :nth-child(3) {
+                    margin: 0;
+                    text-transform: none;
+                    color: #fff;
+                    font-weight: 200;
+                }
+
+                .about_btn {
+                    @include center;
+                    padding: 10px;
+                    margin-top: 30px;
+                    width: 45%;
+                    text-decoration: none;
+                    color: $gold-color;
+                    font-weight: 600;
+                    border: 2px solid $gold-color;
+                }
             }
         }
     }
-}

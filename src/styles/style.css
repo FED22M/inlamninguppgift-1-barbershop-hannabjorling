@@ -1,9 +1,13 @@
 @charset "UTF-8";
+/* STRUKTUR */
+/* Element prio-ordning: */
+/* 1. Pacering/praktiskt */
+/* 2. Design */
 /* IMPORTS */
 @import url("/src/styles/header.css");
 /* MIXIN'S */
 /* för att addera - @include ..();*/
-/* PRIMARY */
+/* PRIMARY COLORS */
 /* @extend - för att återanvända sektion */
 /* FONTER */
 h1 {
