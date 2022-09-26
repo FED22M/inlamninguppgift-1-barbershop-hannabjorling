@@ -1,0 +1,34 @@
+    /* IMPORTS */
+    @import "./header.scss";
+
+    /* MIXIN'S */
+    @mixin center() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* för att addera - @include ..();*/
+
+    /* PRIMARY */
+    $gold-color: rgb(191, 146, 91);
+    $dark-color: rgb(20, 27, 37);
+    $beige-color: rgb(235, 232, 222);
+
+    /* @extend - för att återanvända sektion */
+
+    /* FONTER */
+    h1 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        ;
+    }
+
+    /* DEFAULT */
+    body {
+        margin: 0;
+    }

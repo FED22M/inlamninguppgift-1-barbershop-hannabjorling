@@ -1,0 +1,19 @@
+@charset "UTF-8";
+/* IMPORTS */
+/* MIXIN'S */
+/* för att addera - @include ..();*/
+/* PRIMARY */
+/* @extend - för att återanvända sektion */
+/* FONTER */
+h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+}
+
+/* DEFAULT */
+body {
+  margin: 0;
+}/*# sourceMappingURL=style.css.map */
