@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* IMPORTS */
-@import "/src/styles/header.css";
+@import url("/src/styles/header.css");
 /* MIXIN'S */
 /* för att addera - @include ..();*/
 /* PRIMARY */
@@ -10,11 +10,12 @@ h1 {
   font-family: "Barlow Semi Condensed", sans-serif;
 }
 
-p {
+p, a {
   font-family: "Poppins", sans-serif;
 }
 
 /* DEFAULT */
 body {
   margin: 0;
+  background: #000;
 }/*# sourceMappingURL=style.css.map */
