@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* IMPORTS */
+@import "/src/styles/header.css";
 /* MIXIN'S */
 /* för att addera - @include ..();*/
 /* PRIMARY */

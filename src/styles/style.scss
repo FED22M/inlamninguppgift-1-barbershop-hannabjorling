@@ -1,5 +1,5 @@
     /* IMPORTS */
-    @import "./header.scss";
+    @import "/src/styles/header.css";
 
     /* MIXIN'S */
     @mixin center() {
@@ -20,12 +20,10 @@
     /* FONTER */
     h1 {
         font-family: 'Barlow Semi Condensed', sans-serif;
-
     }
 
     p {
         font-family: 'Poppins', sans-serif;
-        ;
     }
 
     /* DEFAULT */
