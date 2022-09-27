@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <!-- FONTER -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Poppins&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <title>Barbershop</title>
 </head>
 
@@ -22,19 +25,17 @@
                 <div class="header_logo">
                     <a href="index.html">Barbershop</a>
                 </div>
-                <div class="menu">
-                    <p>Menu</p>
-                </div>
-                <nav class="navbar_items">
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#blog">Blog</a>
-                        <li><a href="#contact">Contact</a></li>
+                <nav>
+                    <ul class="menu_list">
+                        <li><a class="list_item" href="#home">Home</a></li>
+                        <li><a class="list_item" href="#about">About</a></li>
+                        <li><a class="list_item" href="#pricing">Pricing</a></li>
+                        <li><a class="list_item" href="#gallery">Gallery</a></li>
+                        <li><a class="list_item" href="#team">Team</a></li>
+                        <li><a class="list_item" href="#blog">Blog</a>
+                        <li><a class="list_item" href="#contact">Contact</a></li>
                     </ul>
+                    <button class="menu_button"><i class="bi bi-list"></i></button>
                 </nav>
             </div>
         </section>
@@ -42,10 +43,11 @@
             <div class="header_container">
                 <p>Welcome to Barbershop</p>
                 <h1 class="header_headline">We will make <span class="outline">your style</span> of your dreams</h1>
-                <ps>A small river named Duden flows by their place and supplies it with the necessary
+                <p>A small river named Duden flows by their place and supplies it with the necessary
                     regelialia. It is a
-                    paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-                    <a class="about_btn" href="#about">Learn more about us</a>
+                    paradisematic country, in which roasted parts of sentences fly into your mouth.
+                </p>
+                <a class="about_btn" href="#about">Learn more about us</a>
             </div>
         </section>
     </header>
@@ -59,7 +61,15 @@
     <footer>
 
     </footer>
+<script>
+    const menuBtn = document.querySelector('.menu_button');
+    const mobileMenu = document.querySelector('.menu_list');
 
+    menuBtn.addEventListener('click', function() {
+        menuBtn.classList.toggle('is-active');
+        mobileMenu.classList.toggle('is-active');
+    });
+</script>
 </body>
 
 </html>
