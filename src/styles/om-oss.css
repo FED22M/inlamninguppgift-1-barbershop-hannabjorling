@@ -1,0 +1,49 @@
+/* PRIMARY */
+/* MIXIN'S */
+main {
+  background: #fff;
+}
+main .om-oss {
+  display: flex;
+  flex-wrap: wrap;
+}
+main .om-oss .om-oss_textbox .main_headline {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+}
+main .om-oss .om-oss_textbox .headline {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+}
+/* MEDIA QUERIES */
+@media screen and (max-width: 600px) {
+  /* MOBILE*/
+  main {
+    padding: 0 20px;
+  }
+  .om-oss_img_container {
+    width: 100%;
+    height: 400px;
+  }
+  .om-oss_img {
+    width: 100%;
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .om-oss_textbox {
+    width: 100%;
+  }
+}
+@min screen and (min-width: 600px) {
+  /* TABLET */
+}
+@media screen and (min-width: 1200px) {
+  /* DESKTOP */
+  main {
+    padding: 0 150px;
+  }
+  .om-oss_textbox {
+    width: 50%;
+  }
+}/*# sourceMappingURL=om-oss.css.map */

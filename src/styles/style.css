@@ -5,6 +5,7 @@
 /* 2. Design */
 /* IMPORTS */
 @import url("/src/styles/header.css");
+@import url("/src/styles/om-oss.css");
 /* MIXIN'S */
 /* för att addera - @include ..();*/
 /* PRIMARY COLORS */
