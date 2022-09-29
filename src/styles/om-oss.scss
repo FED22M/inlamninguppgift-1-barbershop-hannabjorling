@@ -1,4 +1,4 @@
-/* PRIMARY */
+/* PRIMARY COLORS */
 $gold-color: rgb(191, 146, 91);
 $dark-color: rgb(20, 27, 37);
 $beige-color: rgb(235, 232, 222);
@@ -18,36 +18,61 @@ main {
         flex-wrap: wrap;
 
         .om-oss_img_container {
-
             .om-oss_img {}
         }
 
         .om-oss_textbox {
-            .main_headline {
-                font-family: 'Barlow Semi Condensed', sans-serif;
-                text-transform: uppercase;
-            }
+
+            .main_headline {}
 
             .headline {
-                font-family: 'Barlow Semi Condensed', sans-serif;
-                text-transform: uppercase;
+                margin: 0;
             }
 
-            p {}
+            p {
+                font-size: 0.9rem;
+            }
 
-            .om-oss_icon {
-                .fa-light fa-calendar-days {}
+            .om-oss_icon_box {
+                display: flex;
+                background: $gold-color;
+                padding: 10px;
 
-                p {}
+                .bi-calendar-heart {
+                    font-size: 25px;
+                    border: 15px solid black;
+                    border-radius: 50px;
+                    background: black;
+                    color: white;
+                }
 
-                p {}
+                .experience_box {
+                    display: flex;
+                    flex-direction: column;
+                    width: 60%;
+                    margin-left: 20px;
+
+                    p:first-of-type {
+                        font-size: 1.8rem;
+                        margin: auto 0;
+                    }
+
+                    p {
+                        font-family: 'Barlow Semi Condensed', sans-serif;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: 0.7rem;
+                        color: white;
+                        margin: auto 0;
+                    }
+                }
             }
         }
     }
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
 
     /* MOBILE*/
     main {
@@ -65,13 +90,46 @@ main {
         object-fit: cover;
     }
 
-    .om-oss_textbox {
-        width: 100%;
+    .om-oss_icon_box {
+        width: 45%;
     }
+
 }
 
-@min screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
+
     /* TABLET */
+    main {
+        padding: 0 20px;
+    }
+
+    .om-oss_img_container {
+        width: 50%;
+        max-height: 100%;
+    }
+
+    .om-oss_img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .om-oss_textbox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 40%;
+        padding-left: 20px;
+    }
+
+    .om-oss_icon_box {
+        width: 65%;
+    }
+
+    .headline {
+        font-size: 2rem;
+        font-weight: 800;
+    }
 
 }
 
@@ -82,9 +140,15 @@ main {
         padding: 0 150px;
     }
 
-    .om-oss_textbox {
-        width: 50%;
+    .om-oss_img_container {}
 
+    .om-oss_img {
+        object-fit: cover;
+
+    }
+
+    .om-oss_textbox {
+        width: 45%;
     }
 
 }

@@ -33,8 +33,26 @@
         font-family: 'Poppins', sans-serif;
     }
 
+        /* RUBRIKER */
+        h2 {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            text-transform: uppercase;
+            font-stretch: condensed;
+            font-size: 1.1rem;
+            color: $gold-color;
+        }
+    
+        h3 {
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            text-transform: uppercase;
+            font-stretch: condensed;
+            font-size: 1.5rem;
+        }
+
     /* DEFAULT */
     body {
         margin: 0;
         background: #000;
     }
+    
+    
