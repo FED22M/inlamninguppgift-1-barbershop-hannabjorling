@@ -1,0 +1,52 @@
+/* PRIMARY COLORS */
+/* MIXIN'S */
+.services .services_wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 0;
+}
+.services .services_wrapper img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.services .services_wrapper div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #b78649;
+  color: rgb(235, 232, 222);
+  max-height: 100%;
+}
+.services .services_wrapper div:nth-child(odd) {
+  background-color: rgb(191, 146, 91);
+}
+.services .services_wrapper h4 {
+  margin-top: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-stretch: condensed;
+  font-size: 1.4rem;
+}
+.services .services_wrapper p {
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 800px) {
+  /* MOBILE + TABLET */
+}
+@media screen and (min-width: 1200px) {
+  /* DESKTOP */
+  .services_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 0;
+  }
+}/*# sourceMappingURL=services.css.map */

@@ -6,6 +6,8 @@
 /* IMPORTS */
 @import url("/src/styles/header.css");
 @import url("/src/styles/om-oss.css");
+@import url("/src/styles/services-2.css");
+@import url("/src/styles/reviews.css");
 /* MIXIN'S */
 /* för att addera - @include ..();*/
 /* PRIMARY COLORS */

@@ -1,0 +1,51 @@
+/* PRIMARY COLORS */
+/* MIXIN'S */
+.services {
+  margin: 0;
+}
+.services .services_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.services .services_wrapper img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+}
+.services .services_wrapper div {
+  background-color: #b78649;
+  color: rgb(235, 232, 222);
+}
+.services .services_wrapper div:nth-child(odd) {
+  background-color: rgb(191, 146, 91);
+}
+.services .services_wrapper h4 {
+  margin-top: 0;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-stretch: condensed;
+  font-size: 1.4rem;
+}
+.services .services_wrapper p {
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+
+@media screen and (max-width: 800px) {
+  .services .services_wrapper {
+    flex-wrap: wrap;
+  }
+  .services .services_wrapper div {
+    width: 100%;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .services .services_wrapper div {
+    width: 400px;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=services-2.css.map */

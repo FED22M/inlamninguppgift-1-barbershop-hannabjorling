@@ -6,6 +6,10 @@
     /* IMPORTS */
     @import url("/src/styles/header.css");
     @import url("/src/styles/om-oss.css");
+    @import url("/src/styles/services-2.css");
+    @import url("/src/styles/reviews.css");
+
+
 
     /* MIXIN'S */
     @mixin center() {
@@ -33,26 +37,24 @@
         font-family: 'Poppins', sans-serif;
     }
 
-        /* RUBRIKER */
-        h2 {
-            font-family: 'Barlow Semi Condensed', sans-serif;
-            text-transform: uppercase;
-            font-stretch: condensed;
-            font-size: 1.1rem;
-            color: $gold-color;
-        }
-    
-        h3 {
-            font-family: 'Barlow Semi Condensed', sans-serif;
-            text-transform: uppercase;
-            font-stretch: condensed;
-            font-size: 1.5rem;
-        }
+    /* RUBRIKER */
+    h2 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        font-size: 1.1rem;
+        color: $gold-color;
+    }
+
+    h3 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-stretch: condensed;
+        font-size: 1.5rem;
+    }
 
     /* DEFAULT */
     body {
         margin: 0;
         background: #000;
     }
-    
-    

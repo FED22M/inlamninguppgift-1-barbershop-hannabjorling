@@ -1,0 +1,75 @@
+/* PRIMARY COLORS */
+$gold-color: rgb(191, 146, 91);
+$dark-color: rgb(20, 27, 37);
+$beige-color: rgb(235, 232, 222);
+
+/* MIXIN'S */
+@mixin center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    margin: 0;
+
+    .services_wrapper {
+        @include center();
+        flex-direction: row;
+        text-align: center;
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+        }
+
+        div {
+            background-color: #b78649;
+            color: $beige-color;
+        }
+
+        div:nth-child(odd) {
+            background-color: $gold-color;
+        }
+
+        h4 {
+            margin-top: 0;
+            font-family: 'Barlow Semi Condensed', sans-serif;
+            text-transform: uppercase;
+            font-stretch: condensed;
+            font-size: 1.4rem;
+        }
+
+        p {
+            margin-top: 0;
+            font-size: 0.9rem;
+
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .services {
+        .services_wrapper {
+            flex-wrap: wrap;
+
+            div {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 800px) {
+    .services {
+        .services_wrapper {
+            div {
+                width: 400px;
+                padding: 10px;
+            }
+        }
+    }
+}

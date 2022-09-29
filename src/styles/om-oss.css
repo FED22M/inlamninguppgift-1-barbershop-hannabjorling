@@ -21,7 +21,7 @@ main .om-oss .om-oss_textbox .om-oss_icon_box {
 main .om-oss .om-oss_textbox .om-oss_icon_box .bi-calendar-heart {
   font-size: 25px;
   border: 15px solid black;
-  border-radius: 50px;
+  border-radius: 100%;
   background: black;
   color: white;
 }
@@ -47,7 +47,7 @@ main .om-oss .om-oss_textbox .om-oss_icon_box .experience_box p {
 /* MEDIA QUERIES */
 @media screen and (max-width: 800px) {
   /* MOBILE*/
-  main {
+  .om-oss {
     padding: 0 20px;
   }
   .om-oss_img_container {
@@ -66,7 +66,7 @@ main .om-oss .om-oss_textbox .om-oss_icon_box .experience_box p {
 }
 @media screen and (min-width: 800px) {
   /* TABLET */
-  main {
+  .om-oss {
     padding: 0 20px;
   }
   .om-oss_img_container {
@@ -96,7 +96,7 @@ main .om-oss .om-oss_textbox .om-oss_icon_box .experience_box p {
 }
 @media screen and (min-width: 1200px) {
   /* DESKTOP */
-  main {
+  .om-oss {
     padding: 0 150px;
   }
   .om-oss_img {

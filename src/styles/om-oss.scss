@@ -41,7 +41,7 @@ main {
                 .bi-calendar-heart {
                     font-size: 25px;
                     border: 15px solid black;
-                    border-radius: 50px;
+                    border-radius: 100%;
                     background: black;
                     color: white;
                 }
@@ -75,7 +75,7 @@ main {
 @media screen and (max-width: 800px) {
 
     /* MOBILE*/
-    main {
+    .om-oss {
         padding: 0 20px;
     }
 
@@ -99,7 +99,7 @@ main {
 @media screen and (min-width: 800px) {
 
     /* TABLET */
-    main {
+    .om-oss {
         padding: 0 20px;
     }
 
@@ -136,7 +136,7 @@ main {
 @media screen and (min-width: 1200px) {
 
     /* DESKTOP */
-    main {
+    .om-oss {
         padding: 0 150px;
     }
 
@@ -150,5 +150,4 @@ main {
     .om-oss_textbox {
         width: 45%;
     }
-
 }

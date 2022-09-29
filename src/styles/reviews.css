@@ -1,0 +1,8 @@
+.reviews {
+  background-color: #eae8de;
+}
+@media screen and (max-width: 800px) {
+  .reviews_container {
+    margin: 15px;
+  }
+}/*# sourceMappingURL=reviews.css.map */
