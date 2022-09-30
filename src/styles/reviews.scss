@@ -1,34 +1,170 @@
-.reviews {
-    background-color: #eae8de;
+  /* PRIMARY COLORS */
+  $gold-color: rgb(191, 146, 91);
+  $dark-color: rgb(20, 27, 37);
+  $beige-color: rgb(235, 232, 222);
 
-    .reviews_container {
-        .main_headline {
-            .headline {
-                .reviews_cards {
-                    .card {
+  .reviews {
+      background-color: #eae8de;
 
-                        .bi bi-quote {
-                            p {}
+      .reviews_container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
 
-                            .customer_img {}
+          .main_headline {}
 
-                            p {}
+          .headline {
+              text-align: center;
+          }
 
-                            p {}
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
+          .reviews_cards {
+              /* slider */
+              display: flex;
+              flex-direction: row;
 
-@media screen and (max-width: 800px) {
-    .reviews_container {
-        margin: 15px;
-    }
+              .card {
+                  /* slides */
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  height: 100%;
+                  background-color: #fff;
+                  border: 1px solid $beige-color;
+                  border-radius: 5px;
+                  box-shadow: 5px 5px 5px $beige-color;
+                  padding: 20px;
 
-    .card {}
-}
 
-@media screen and (min-width: 800px) {}
+                  .slide_left {
+                      position: absolute;
+                      left: 5px;
+                      top: 120px;
+                      font-size: 2rem;
+                      color: $gold-color;
+                      opacity: 0.3;
+                  }
+
+                  .slide_right {
+                      position: absolute;
+                      right: 5px;
+                      top: 120px;
+                      font-size: 2rem;
+                      color: $gold-color;
+                      opacity: 0.3;
+                  }
+
+                  .slide_left:hover,
+                  .slide_right:hover {
+                      opacity: 1;
+                  }
+
+                  .bi-quote {
+                      width: 25px;
+                      font-size: 1.5rem;
+                      border-radius: 100%;
+                      background-color: $gold-color;
+                      color: #fff;
+                      padding: 8px;
+                  }
+
+                  .review {
+                      padding: 0 25px;
+                      position: absolute;
+                      top: 60px;
+                  }
+
+                  .review_customer {
+                      display: flex;
+                      max-width: 300px;
+
+                      span {
+                          height: 100px;
+                          width: 100px;
+                          border-radius: 100%;
+                      }
+
+                      .customer_img_1 {
+                          content: url(/img/reviews_1.jpg);
+                      }
+
+                      .customer_img_2 {
+                          content: url(/img/reviews_2.jpg);
+                      }
+
+                      .customer_img_3 {
+                          content: url(/img/reviews_3.jpg);
+                      }
+
+                      .review_sign {
+                          display: inline-block;
+                          width: 50%;
+
+                          .stars {}
+
+                          p {
+                              margin: 5px;
+                          }
+                      }
+                  }
+              }
+
+              .bottom_links {
+                  span {}
+              }
+          }
+      }
+  }
+
+
+
+  @media screen and (max-width: 800px) {
+      .reviews {
+
+          .reviews_container {
+              /* slider */
+              margin: 25px;
+              height: 800px;
+              max-width: 100%;
+              position: relative;
+
+              .main_headline {}
+
+              .headline {}
+
+              .reviews_cards {
+                  /* slides */
+                  display: flex;
+                  overflow-x: hidden;
+                  position: relative;
+                  scroll-behavior: smooth;
+                  scroll-snap-type: x mandatory;
+
+                  .card {
+                      /* slide */
+                      display: flex;
+                      flex-direction: column;
+                      flex-shrink: 0;
+                      width: 100%;
+                      height: 100%;
+                      scroll-snap-align: center;
+                      box-sizing: border-box;
+                      transform: scale(1);
+
+                      .bi-quote {}
+
+                      p {}
+
+                      p {}
+
+                      p {}
+                  }
+
+                  .bottom_links {}
+              }
+          }
+      }
+
+  }
+
+  @media screen and (min-width: 800px) {}
