@@ -6,6 +6,7 @@
     /* IMPORTS */
     @import url("/src/styles/header.css");
     @import url("/src/styles/om-oss.css");
+    @import url("/src/styles/footer.css");
 
     /* TESTER */
     @import url("/src/styles/services-2.css");
@@ -50,6 +51,12 @@
         text-transform: uppercase;
         font-weight: 900;
         font-size: 1.5rem;
+    }
+
+    h4 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.3rem;
     }
 
     /* DEFAULT */

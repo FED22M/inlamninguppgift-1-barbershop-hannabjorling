@@ -1,0 +1,27 @@
+/* PRIMARY COLORS */
+footer .footer_nav .footer_section h4 {
+  color: #fff;
+}
+footer .footer_nav .footer_section p {
+  color: #fff;
+}
+footer .footer_nav .footer_section .social-links {
+  color: #fff;
+  background-color: rgb(191, 146, 91);
+  border-radius: 100%;
+}
+footer .footer_nav .footer_section ul li .fa-solid {
+  color: #fff;
+  font-size: 0.9rem;
+}
+footer .footer_nav .footer_section ul li .fa-map,
+footer .footer_nav .footer_section ul li .fa-phone,
+footer .footer_nav .footer_section ul li .fa-paper-plane {
+  color: rgb(191, 146, 91);
+}
+footer .footer_nav .footer_section ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 0.9rem;
+}/*# sourceMappingURL=footer.css.map */

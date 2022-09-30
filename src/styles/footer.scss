@@ -1,0 +1,47 @@
+    /* PRIMARY COLORS */
+    $gold-color: rgb(191, 146, 91);
+    $dark-color: rgb(20, 27, 37);
+    $beige-color: rgb(235, 232, 222);
+
+    footer {
+        .footer_nav {
+            .footer_section {
+                h4 {
+                    color: #fff;
+                }
+
+                p {
+                    color: #fff;
+                }
+
+                .social-links {
+                    color: #fff;
+                    background-color: $gold-color;
+                    border-radius: 100%;
+                }
+
+                ul {
+                    li {
+                        .fa-solid {
+                            color: #fff;
+                            font-size: 0.9rem;
+                        }
+
+                        .fa-map,
+                        .fa-phone,
+                        .fa-paper-plane {
+                            color: $gold-color;
+                        }
+
+                        a {
+                            color: #fff;
+                            text-decoration: none;
+                            font-weight: 400;
+                            font-size: 0.9rem;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
