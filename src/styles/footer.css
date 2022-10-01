@@ -1,27 +1,84 @@
 /* PRIMARY COLORS */
-footer .footer_nav .footer_section h4 {
+/* MIXIN'S */
+footer {
+  background-color: #090600;
+}
+footer .footer_nav {
+  display: flex;
+  justify-content: center;
+}
+footer .footer_nav h4 {
   color: #fff;
 }
-footer .footer_nav .footer_section p {
-  color: #fff;
+footer .footer_nav p {
+  color: #cecdcc;
+  font-size: 0.9rem;
 }
-footer .footer_nav .footer_section .social-links {
+footer .footer_nav .social-links {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   background-color: rgb(191, 146, 91);
   border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  font-size: 0.7rem;
+  margin-right: 10px;
+  text-decoration: none;
 }
-footer .footer_nav .footer_section ul li .fa-solid {
-  color: #fff;
+footer .footer_nav ul {
+  list-style: none;
+  padding: 0;
+}
+footer .footer_nav ul li {
+  margin-bottom: 20px;
+}
+footer .footer_nav ul li .fa-solid {
+  color: #cecdcc;
   font-size: 0.9rem;
 }
-footer .footer_nav .footer_section ul li .fa-map,
-footer .footer_nav .footer_section ul li .fa-phone,
-footer .footer_nav .footer_section ul li .fa-paper-plane {
-  color: rgb(191, 146, 91);
-}
-footer .footer_nav .footer_section ul li a {
-  color: #fff;
+footer .footer_nav ul li a {
+  color: #cecdcc;
   text-decoration: none;
   font-weight: 400;
+  margin-left: 10px;
   font-size: 0.9rem;
+}
+footer .footer_nav adress {
+  color: rgb(235, 232, 222);
+}
+footer .footer_nav adress .fa-map,
+footer .footer_nav adress .fa-phone,
+footer .footer_nav adress .fa-paper-plane {
+  color: rgb(191, 146, 91);
+  padding-right: 20px;
+}
+footer .footer_nav adress a {
+  color: #cecdcc;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+/* MEDIA QUERIES - MOBILE + TABLET */
+@media screen and (max-width: 1200px) {
+  .footer_nav {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .footer_nav .footer_section:first-of-type > h4,
+.footer_nav h4 + p {
+    display: none;
+  }
+}
+/* MEDIA QUERIES - DESKTOP */
+@media screen and (min-width: 1200px) {
+  .footer_nav {
+    flex-direction: row;
+    padding: 60px 200px;
+  }
+  .footer_nav .footer_section {
+    width: 25%;
+  }
 }/*# sourceMappingURL=footer.css.map */

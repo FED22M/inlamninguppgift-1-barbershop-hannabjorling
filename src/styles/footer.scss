@@ -1,47 +1,111 @@
-    /* PRIMARY COLORS */
-    $gold-color: rgb(191, 146, 91);
-    $dark-color: rgb(20, 27, 37);
-    $beige-color: rgb(235, 232, 222);
+/* PRIMARY COLORS */
+$gold-color: rgb(191, 146, 91);
+$dark-color: rgb(20, 27, 37);
+$beige-color: rgb(235, 232, 222);
 
-    footer {
-        .footer_nav {
-            .footer_section {
-                h4 {
-                    color: #fff;
+/* MIXIN'S */
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    background-color: #090600;
+
+    .footer_nav {
+        display: flex;
+        justify-content: center;
+
+        h4 {
+            color: #fff;
+        }
+
+        p {
+            color: #cecdcc;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: inline-flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            background-color: $gold-color;
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+            font-size: 0.7rem;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                margin-bottom: 20px;
+
+                .fa-solid {
+                    color: #cecdcc;
+                    font-size: 0.9rem;
                 }
 
-                p {
-                    color: #fff;
-                }
-
-                .social-links {
-                    color: #fff;
-                    background-color: $gold-color;
-                    border-radius: 100%;
-                }
-
-                ul {
-                    li {
-                        .fa-solid {
-                            color: #fff;
-                            font-size: 0.9rem;
-                        }
-
-                        .fa-map,
-                        .fa-phone,
-                        .fa-paper-plane {
-                            color: $gold-color;
-                        }
-
-                        a {
-                            color: #fff;
-                            text-decoration: none;
-                            font-weight: 400;
-                            font-size: 0.9rem;
-                        }
-
-                    }
+                a {
+                    color: #cecdcc;
+                    text-decoration: none;
+                    font-weight: 400;
+                    margin-left: 10px;
+                    font-size: 0.9rem;
                 }
             }
         }
+
+        adress {
+            color: $beige-color;
+
+            .fa-map,
+            .fa-phone,
+            .fa-paper-plane {
+                color: $gold-color;
+                padding-right: 20px;
+            }
+
+            a {
+                color: #cecdcc;
+                text-decoration: none;
+                font-weight: 400;
+            }
+        }
     }
+}
+
+/* MEDIA QUERIES - MOBILE + TABLET */
+@media screen and (max-width: 1200px) {
+    .footer_nav {
+        flex-direction: column;
+        padding: 20px;
+
+        .footer_section:first-of-type>h4,
+        h4+p {
+            display: none;
+        }
+
+        .social-links {}
+
+    }
+}
+
+/* MEDIA QUERIES - DESKTOP */
+@media screen and (min-width: 1200px) {
+    .footer_nav {
+        flex-direction: row;
+        padding: 60px 200px;
+
+        .footer_section {
+            width: 25%;
+        }
+    }
+}
