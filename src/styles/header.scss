@@ -20,6 +20,9 @@ header {
     .navbar {
         display: flex;
         justify-content: flex-end;
+        position: fixed;
+        top: 0;
+        width: 100%;
 
         .nav_container {
             display: flex;
@@ -27,6 +30,7 @@ header {
             align-items: center;
             width: 100%;
             background-color: rgba(31, 31, 31, 0.3);
+
 
             .header_logo {
                 a {
@@ -57,75 +61,81 @@ header {
                         text-decoration: none;
                         text-transform: uppercase;
                     }
-                }
 
-                .menu_button {
-                    background-color: transparent;
-                    border: none;
-                    font-size: 2rem;
-                    color: #fff;
-                    cursor: pointer;
-                }
+                    .first {
+                        color: $gold-color;
+                    }
 
-                .menu_list.is-active {
-                    display: block;
-                    opacity: 0.95;
-                    visibility: visible;
                 }
             }
+
         }
-    }
 
-    .header_main {
-        .header_container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 10px;
+        .menu_button {
+            background-color: transparent;
+            border: none;
+            font-size: 2rem;
+            color: #fff;
+            cursor: pointer;
+        }
 
-            :first-child {
-                margin: 160px 0 0 0;
-                color: $gold-color;
-                font-weight: 600;
-                font-size: 1.1em;
-            }
-
-            h1,
-            .outline {
-                margin: 0 0 20px 0;
-                color: #fff;
-                /* fallback */
-                font-size: 2.6rem;
-                font-stretch: condensed;
-                font-weight: 800;
-
-                .outline {
-                    -webkit-text-fill-color: transparent;
-                    -webkit-text-stroke-width: 1px;
-                }
-            }
-
-            .header_textbox {
-                margin: 0;
-                text-transform: none;
-                color: #fff;
-                font-weight: 200;
-            }
-
-            .about_btn {
-                @include center;
-                padding: 10px;
-                margin-top: 30px;
-                text-decoration: none;
-                color: $gold-color;
-                font-weight: 600;
-                border: 2px solid $gold-color;
-                text-transform: uppercase;
-            }
+        .menu_list.is-active {
+            display: block;
+            opacity: 0.95;
+            visibility: visible;
         }
     }
 }
 
+
+.header_main {
+    .header_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        :first-child {
+            margin: 160px 0 0 0;
+            color: $gold-color;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        h1,
+        .outline {
+            margin: 0 0 20px 0;
+            color: #fff;
+            /* fallback */
+            font-size: 2.6rem;
+            font-stretch: condensed;
+            font-weight: 800;
+
+            .outline {
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 1px;
+            }
+        }
+
+        .header_textbox {
+            flex-direction: column;
+            margin: 0;
+            text-transform: none;
+            color: #fff;
+            font-weight: 200;
+        }
+
+        .about_btn {
+            @include center;
+            padding: 10px;
+            margin-top: 30px;
+            text-decoration: none;
+            color: $gold-color;
+            font-weight: 600;
+            border: 2px solid $gold-color;
+            text-transform: uppercase;
+        }
+    }
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 1200px) {
@@ -209,15 +219,7 @@ header {
         }
     }
 
-    .header_linje {
-        width: 100vw;
-        border-top: 1px dashed #0d0c0d;
-        position: relative;
-        margin: 0px;
-    }
-
     .header_main {
-        border-top: 6px solid rgba(0, 0, 0, 0.5);
         display: flex;
         justify-content: center;
 
@@ -234,31 +236,25 @@ header {
 
             .header_textbox {
                 display: flex;
-                flex-direction: row;
-                height: 200px;
-
-                .header_seperate {
-                    width: 1px;
-                    height: 200px;
-                    border-left: 1px solid $gold-color;
-                    position: relative;
-                    margin-top: 0;
-                }
 
                 p {
                     margin-left: 100px;
                     width: 70%;
+                    height: 100%;
                 }
 
-                .about_btn {
-                    width: 200px;
-                    font-size: 0.9rem;
-                    position: relative;
-                    margin-bottom: 0;
-                }
+                .about_btn {}
             }
-
-
         }
+
+        .header_seperate {
+            position: relative;
+            top: 330px;
+            left: 10px;
+            width: 1px;
+            height: 240px;
+            border-left: 1px solid $gold-color;
+        }
+
     }
 }

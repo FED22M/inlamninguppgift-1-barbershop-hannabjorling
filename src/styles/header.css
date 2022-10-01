@@ -10,6 +10,9 @@ header {
 header .navbar {
   display: flex;
   justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 header .navbar .nav_container {
   display: flex;
@@ -44,32 +47,35 @@ header .navbar .nav_container nav .menu_list .list_item {
   text-decoration: none;
   text-transform: uppercase;
 }
-header .navbar .nav_container nav .menu_button {
+header .navbar .nav_container nav .menu_list .first {
+  color: rgb(191, 146, 91);
+}
+header .navbar .menu_button {
   background-color: transparent;
   border: none;
   font-size: 2rem;
   color: #fff;
   cursor: pointer;
 }
-header .navbar .nav_container nav .menu_list.is-active {
+header .navbar .menu_list.is-active {
   display: block;
   opacity: 0.95;
   visibility: visible;
 }
-header .header_main .header_container {
+
+.header_main .header_container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 10px;
 }
-header .header_main .header_container :first-child {
+.header_main .header_container :first-child {
   margin: 160px 0 0 0;
   color: rgb(191, 146, 91);
   font-weight: 600;
   font-size: 1.1em;
 }
-header .header_main .header_container h1,
-header .header_main .header_container .outline {
+.header_main .header_container h1,
+.header_main .header_container .outline {
   margin: 0 0 20px 0;
   color: #fff;
   /* fallback */
@@ -77,18 +83,19 @@ header .header_main .header_container .outline {
   font-stretch: condensed;
   font-weight: 800;
 }
-header .header_main .header_container h1 .outline,
-header .header_main .header_container .outline .outline {
+.header_main .header_container h1 .outline,
+.header_main .header_container .outline .outline {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1px;
 }
-header .header_main .header_container .header_textbox {
+.header_main .header_container .header_textbox {
+  flex-direction: column;
   margin: 0;
   text-transform: none;
   color: #fff;
   font-weight: 200;
 }
-header .header_main .header_container .about_btn {
+.header_main .header_container .about_btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -164,14 +171,7 @@ header .header_main .header_container .about_btn {
     opacity: 0;
     visibility: hidden;
   }
-  .header_linje {
-    width: 100vw;
-    border-top: 1px dashed #0d0c0d;
-    position: relative;
-    margin: 0px;
-  }
   .header_main {
-    border-top: 6px solid rgba(0, 0, 0, 0.5);
     display: flex;
     justify-content: center;
   }
@@ -186,24 +186,18 @@ header .header_main .header_container .about_btn {
   }
   .header_main .header_container .header_textbox {
     display: flex;
-    flex-direction: row;
-    height: 200px;
-  }
-  .header_main .header_container .header_textbox .header_seperate {
-    width: 1px;
-    height: 200px;
-    border-left: 1px solid rgb(191, 146, 91);
-    position: relative;
-    margin-top: 0;
   }
   .header_main .header_container .header_textbox p {
     margin-left: 100px;
     width: 70%;
+    height: 100%;
   }
-  .header_main .header_container .header_textbox .about_btn {
-    width: 200px;
-    font-size: 0.9rem;
+  .header_main .header_seperate {
     position: relative;
-    margin-bottom: 0;
+    top: 330px;
+    left: 10px;
+    width: 1px;
+    height: 240px;
+    border-left: 1px solid rgb(191, 146, 91);
   }
 }/*# sourceMappingURL=header.css.map */
