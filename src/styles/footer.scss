@@ -3,13 +3,6 @@ $gold-color: rgb(191, 146, 91);
 $dark-color: rgb(20, 27, 37);
 $beige-color: rgb(235, 232, 222);
 
-/* MIXIN'S */
-@mixin center() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 footer {
     background-color: #090600;
 
@@ -80,6 +73,25 @@ footer {
             }
         }
     }
+
+    .questions.footer_section {
+        .fa-map {
+            width: 34px;
+            padding: 0;
+        }
+
+        p {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: row;
+        }
+
+        span {
+            /* gör att adressen inte går över hela skärmen */
+            display: inline-block;
+            width: 100%;
+        }
+    }
 }
 
 /* MEDIA QUERIES - MOBILE + TABLET */
@@ -90,11 +102,9 @@ footer {
 
         .footer_section:first-of-type>h4,
         h4+p {
+            /* döljer första texten i mob+tab res */
             display: none;
         }
-
-        .social-links {}
-
     }
 }
 
@@ -106,6 +116,11 @@ footer {
 
         .footer_section {
             width: 25%;
+
+            /* gör att text + adress inte flyter ut för mycket */
+            p {
+                width: 70%;
+            }
         }
     }
 }

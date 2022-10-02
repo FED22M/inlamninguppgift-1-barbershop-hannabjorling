@@ -1,5 +1,5 @@
+@charset "UTF-8";
 /* PRIMARY COLORS */
-/* MIXIN'S */
 footer {
   background-color: #090600;
 }
@@ -60,6 +60,20 @@ footer .footer_nav adress a {
   text-decoration: none;
   font-weight: 400;
 }
+footer .questions.footer_section .fa-map {
+  width: 34px;
+  padding: 0;
+}
+footer .questions.footer_section p {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+}
+footer .questions.footer_section span {
+  /* gör att adressen inte går över hela skärmen */
+  display: inline-block;
+  width: 100%;
+}
 
 /* MEDIA QUERIES - MOBILE + TABLET */
 @media screen and (max-width: 1200px) {
@@ -69,6 +83,7 @@ footer .footer_nav adress a {
   }
   .footer_nav .footer_section:first-of-type > h4,
 .footer_nav h4 + p {
+    /* döljer första texten i mob+tab res */
     display: none;
   }
 }
@@ -80,5 +95,9 @@ footer .footer_nav adress a {
   }
   .footer_nav .footer_section {
     width: 25%;
+    /* gör att text + adress inte flyter ut för mycket */
+  }
+  .footer_nav .footer_section p {
+    width: 70%;
   }
 }/*# sourceMappingURL=footer.css.map */

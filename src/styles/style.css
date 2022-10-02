@@ -5,11 +5,11 @@
 /* 2. Design */
 /* IMPORTS */
 @import url("/src/styles/header.css");
-@import url("/src/styles/om-oss.css");
+@import url("/src/styles/about.css");
 @import url("/src/styles/footer.css");
 /* TESTER */
-@import url("/src/styles/services-2.css");
-@import url("/src/styles/reviews-2.css");
+@import url("/src/styles/services.css");
+@import url("/src/styles/reviews.css");
 /* MIXIN'S */
 /* för att addera - @include ..();*/
 /* PRIMARY COLORS */
