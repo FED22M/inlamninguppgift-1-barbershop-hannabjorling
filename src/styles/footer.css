@@ -46,23 +46,15 @@ footer .footer_nav ul li a {
   margin-left: 10px;
   font-size: 0.9rem;
 }
-footer .footer_nav adress {
-  color: rgb(235, 232, 222);
-}
-footer .footer_nav adress .fa-map,
-footer .footer_nav adress .fa-phone,
-footer .footer_nav adress .fa-paper-plane {
-  color: rgb(191, 146, 91);
-  padding-right: 20px;
-}
-footer .footer_nav adress a {
-  color: #cecdcc;
-  text-decoration: none;
-  font-weight: 400;
-}
 footer .questions.footer_section .fa-map {
   width: 34px;
   padding: 0;
+}
+footer .questions.footer_section .fa-map,
+footer .questions.footer_section .fa-phone,
+footer .questions.footer_section .fa-paper-plane {
+  color: rgb(191, 146, 91);
+  padding-right: 20px;
 }
 footer .questions.footer_section p {
   display: flex;

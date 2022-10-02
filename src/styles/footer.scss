@@ -55,29 +55,19 @@ footer {
                 }
             }
         }
-
-        adress {
-            color: $beige-color;
-
-            .fa-map,
-            .fa-phone,
-            .fa-paper-plane {
-                color: $gold-color;
-                padding-right: 20px;
-            }
-
-            a {
-                color: #cecdcc;
-                text-decoration: none;
-                font-weight: 400;
-            }
-        }
     }
 
     .questions.footer_section {
         .fa-map {
             width: 34px;
             padding: 0;
+        }
+
+        .fa-map,
+        .fa-phone,
+        .fa-paper-plane {
+            color: $gold-color;
+            padding-right: 20px;
         }
 
         p {
