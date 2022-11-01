@@ -1,0 +1,48 @@
+@charset "UTF-8";
+/* PRIMARY COLORS */
+/* MIXIN'S */
+.services {
+  margin: 0;
+}
+.services .services_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  text-align: center;
+}
+.services .services_wrapper img {
+  /* placerar ovanför sin div */
+  margin-top: -90px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+.services .services_wrapper div {
+  background-color: #b78649;
+  color: rgb(235, 232, 222);
+  height: 300px;
+  padding: 20px;
+}
+.services .services_wrapper div:nth-child(odd) {
+  background-color: rgb(191, 146, 91);
+}
+.services .services_wrapper h4 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  margin: 20px;
+}
+.services .services_wrapper p {
+  font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES - MOBILE+TABLET */
+@media screen and (max-width: 800px) {
+  .services_wrapper {
+    flex-wrap: wrap;
+  }
+  .services_wrapper div {
+    width: 100%;
+  }
+}/*# sourceMappingURL=services.css.map */

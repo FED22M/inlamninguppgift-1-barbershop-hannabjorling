@@ -1,0 +1,131 @@
+/* PRIMARY COLORS */
+$gold-color: rgb(191, 146, 91);
+$dark-color: rgb(20, 27, 37);
+$beige-color: rgb(235, 232, 222);
+
+main {
+    background: #fff;
+
+    .about {
+        display: flex;
+        flex-wrap: wrap;
+
+        .headline {
+            margin: 0;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        .about_icon_box {
+            display: flex;
+            background: $gold-color;
+            padding: 10px;
+            width: 50%;
+
+            .bi-calendar-heart {
+                font-size: 25px;
+                border: 15px solid black;
+                border-radius: 100%;
+                background: black;
+                color: white;
+            }
+
+            .experience_box {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                margin-left: 20px;
+
+                p:first-of-type {
+                    font-size: 1.8rem;
+                    margin: auto 0;
+                }
+
+                p {
+                    font-family: 'Barlow Semi Condensed', sans-serif;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 0.7rem;
+                    color: white;
+                    margin: auto 0;
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES - MOBILE */
+@media screen and (max-width: 800px) {
+    .about {
+        padding: 20px 20px 60px 20px;
+    }
+
+    /* hindrar bild från att växa i mobile res */
+    .about_img_container {
+        width: 100%;
+        height: 400px;
+    }
+
+    /* hindrar bild från att växa i mobile res */
+    .about_img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .about_icon_box {
+        margin: 40px 0;
+    }
+
+    .about_textbox {
+        margin-top: 40px;
+    }
+}
+
+/* MEDIA QUERIES - TABLET */
+@media screen and (min-width: 800px) {
+    .about {
+        padding: 0 20px;
+
+        .about_img_container {
+            width: 50%;
+            max-height: 100%;
+
+            .about_img {
+                width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .about_textbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 40%;
+            padding-left: 20px;
+
+            .headline {
+                font-size: 2rem;
+                font-weight: 800;
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES - DESKTOP */
+@media screen and (min-width: 1200px) {
+    .about {
+        padding: 0 150px;
+
+        .about_img {
+            object-fit: cover;
+        }
+
+        .about_textbox {
+            width: 45%;
+        }
+    }
+}

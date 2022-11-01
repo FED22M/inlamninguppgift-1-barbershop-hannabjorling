@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/* PRIMARY */
+/* MIXIN'S */
+header {
+  background: no-repeat center url("/img/header_2.jpg");
+  background-size: cover;
+  text-transform: uppercase;
+  width: 100vw;
+  /* calc för att bilden i services inte ska synas */
+  height: calc(100vh + 45px);
+}
+header .navbar {
+  /* placerar navbar fäst i toppen vid scroll down */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* visar menyn vid click */
+}
+header .navbar .nav_container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(31, 31, 31, 0.6);
+}
+header .navbar .nav_container .header_logo a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-stretch: condensed;
+  font-size: 1.8rem;
+}
+header .navbar .nav_container nav {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+header .navbar .nav_container nav .menu_list {
+  list-style: none;
+}
+header .navbar .nav_container nav .menu_list .list_item {
+  font-size: 1.2rem;
+  color: #fff;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-stretch: condensed;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+header .navbar .nav_container nav .menu_list .list_item:hover {
+  color: rgb(191, 146, 91);
+  transition: 0.3s;
+}
+header .navbar .nav_container nav .menu_list .first {
+  color: rgb(191, 146, 91);
+}
+header .navbar .nav_container nav .menu_list .first:hover {
+  color: #fff;
+}
+header .navbar .menu_button {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+header .navbar .menu_list.is-active {
+  display: block;
+  opacity: 0.95;
+  visibility: visible;
+}
+
+.header_main {
+  /* margin-top för att lägga sig precis under nav */
+  margin-top: 56px;
+  height: 100vh;
+  display: flex;
+}
+.header_main .header_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* btn blir större vid hover */
+}
+.header_main .header_container .header_welcome {
+  color: rgb(191, 146, 91);
+  font-weight: 600;
+  font-size: 1.1em;
+}
+.header_main .header_container h1,
+.header_main .header_container .outline {
+  margin: 0 0 20px 0;
+  color: #fff;
+  font-size: 2.6rem;
+}
+.header_main .header_container h1 .outline,
+.header_main .header_container .outline .outline {
+  /* fallback om webbläsare inte stödjer - visas vit */
+  color: white;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+}
+.header_main .header_container .header_textbox {
+  flex-direction: column;
+  margin: 0;
+  text-transform: none;
+  color: #fff;
+}
+.header_main .header_container .about_btn {
+  padding: 8px 12px;
+  text-decoration: none;
+  color: rgb(191, 146, 91);
+  font-weight: 600;
+  border: 2px solid rgb(191, 146, 91);
+  text-transform: uppercase;
+}
+.header_main .header_container .about_btn:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/* MEDIA QUERIES - MOBILE+TABLET */
+@media screen and (max-width: 1200px) {
+  .navbar {
+    padding: 8px 0;
+  }
+  .navbar .nav_container {
+    height: 40px;
+    /* döljer meny vid mobile */
+  }
+  .navbar .nav_container .header_logo a {
+    margin-left: 15px;
+  }
+  .navbar .nav_container .menu_list {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    width: 100vw;
+    position: absolute;
+    top: 40px;
+  }
+  .navbar .nav_container .menu_list .list_item {
+    display: block;
+    height: 60px;
+    padding: 20px 0 0 50px;
+    background-color: #000;
+  }
+  .header_main {
+    border-top: 1px dashed #0d0c0d;
+  }
+  .header_main .header_container {
+    /* height 80 + flexend för positionering */
+    height: 80vh;
+    padding-right: 10px;
+    justify-content: flex-end;
+  }
+  .header_main .header_textbox p {
+    padding-bottom: 40px;
+  }
+  .header_main .about_btn {
+    width: 40%;
+  }
+}
+/* MEDIA QUERIES - DESKTOP */
+@media screen and (min-width: 1200px) {
+  .nav_container {
+    border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+    /* döljer menyknapp vid desktop */
+  }
+  .nav_container .header_logo a {
+    margin-left: 230px;
+  }
+  .nav_container .menu_list {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 150px;
+  }
+  .nav_container .menu_list li {
+    display: flex;
+    padding: 0 20px;
+  }
+  .nav_container .menu_list li .list_item {
+    font-size: 1rem;
+  }
+  .nav_container .menu_button {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .header_main .header_container {
+    width: 50%;
+    justify-content: center;
+  }
+  .header_main .header_container .header_welcome {
+    margin: -80px 0 0 10px;
+  }
+  .header_main .header_container .header_headline {
+    margin-left: 10px;
+    font-size: 3rem;
+  }
+  .header_main .header_container .header_headline .outline {
+    font-size: 3rem;
+  }
+  .header_main .header_container .header_textbox {
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    height: 210px;
+  }
+  .header_main .header_container .header_textbox p {
+    margin: 0 0 0 100px;
+  }
+  .header_main .header_container .header_textbox .about_btn {
+    width: 45%;
+    text-align: center;
+    margin-left: 100px;
+  }
+  .header_main .header_seperate {
+    position: relative;
+    top: 405px;
+    left: 25px;
+    width: 1px;
+    height: 210px;
+    border-left: 1px solid rgb(191, 146, 91);
+  }
+}/*# sourceMappingURL=header.css.map */

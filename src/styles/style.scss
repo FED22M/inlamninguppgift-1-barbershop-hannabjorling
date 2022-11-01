@@ -1,0 +1,66 @@
+    /* STRUKTUR */
+    /* Element prio-ordning: */
+    /* 1. Pacering/praktiskt */
+    /* 2. Design */
+
+    /* IMPORTS */
+    @import url("/src/styles/header.css");
+    @import url("/src/styles/about.css");
+    @import url("/src/styles/footer.css");
+
+    /* TESTER */
+    @import url("/src/styles/services.css");
+    @import url("/src/styles/reviews.css");
+
+    /* MIXIN'S */
+    @mixin center() {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* för att addera - @include ..();*/
+
+    /* PRIMARY COLORS */
+    $gold-color: rgb(191, 146, 91);
+    $dark-color: rgb(20, 27, 37);
+    $beige-color: rgb(235, 232, 222);
+
+    /* @extend - för att återanvända sektion */
+
+    /* FONTER */
+    h1 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+
+    p,
+    a {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* RUBRIKER */
+    h2 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.1rem;
+        color: $gold-color;
+    }
+
+    h3 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        text-transform: uppercase;
+        font-size: 1.3rem;
+    }
+
+    /* DEFAULT */
+    body {
+        margin: 0;
+        background: #000;
+    }

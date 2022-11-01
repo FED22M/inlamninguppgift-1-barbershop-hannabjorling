@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/* STRUKTUR */
+/* Element prio-ordning: */
+/* 1. Pacering/praktiskt */
+/* 2. Design */
+/* IMPORTS */
+@import url("/styles/header.css");
+@import url("/styles/about.css");
+@import url("/styles/footer.css");
+/* TESTER */
+@import url("/styles/services.css");
+@import url("/styles/reviews.css");
+/* MIXIN'S */
+/* för att addera - @include ..();*/
+/* PRIMARY COLORS */
+/* @extend - för att återanvända sektion */
+/* FONTER */
+h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+p,
+a {
+  font-family: "Poppins", sans-serif;
+}
+
+/* RUBRIKER */
+h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: rgb(191, 146, 91);
+}
+
+h3 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+/* DEFAULT */
+body {
+  margin: 0;
+  background: #000;
+}/*# sourceMappingURL=style.css.map */

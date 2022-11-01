@@ -1,0 +1,224 @@
+/* PRIMARY COLORS */
+$gold-color: rgb(191, 146, 91);
+$dark-color: rgb(20, 27, 37);
+$beige-color: rgb(235, 232, 222);
+
+/* MIXIN'S */
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reviews {
+    background-color: #eae8de;
+    height: 100%;
+    margin: 0;
+
+    .reviews_container-headline {
+        @include center();
+        flex-direction: column;
+        text-align: center;
+        height: 25vh;
+
+        h3 {
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+    }
+
+    .reviews_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        .card {
+            background-color: #fff;
+            border: 1px solid $beige-color;
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px $beige-color;
+
+            .bi-quote {
+                width: 25px;
+                padding: 8px;
+                font-size: 1.5rem;
+                border-radius: 100%;
+                background-color: $gold-color;
+                color: #fff;
+            }
+
+            .review {
+                font-size: 0.9rem;
+            }
+
+            .review_customer {
+                display: flex;
+                max-width: 300px;
+                align-items: center;
+
+                span {
+                    height: 100px;
+                    width: 100px;
+                    border-radius: 100%;
+                }
+
+                .customer_img_1 {
+                    content: url(/img/reviews_1.jpg);
+                }
+
+                .customer_img_2 {
+                    content: url(/img/reviews_2.jpg);
+                }
+
+                .customer_img_3 {
+                    content: url(/img/reviews_3.jpg);
+                }
+
+                .bi-star-fill {
+                    color: $gold-color;
+                    font-size: 0.7rem;
+                }
+
+                p {
+                    margin: 5px 20px;
+                }
+
+                /* gör kundnamn tjockare */
+                p:nth-child(2) {
+                    font-weight: 800;
+                }
+
+                p:last-of-type {
+                    text-transform: uppercase;
+                    font-size: 0.8rem;
+                    font-weight: 800;
+                    color: $gold-color;
+                }
+            }
+        }
+    }
+}
+
+/* MEDIA QUERIES - MOBILE+TABLET */
+@media screen and (max-width: 1200px) {
+    .slider {
+        height: 300px;
+        margin: 20px;
+        border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+
+        .slides {
+            display: flex;
+            /* overflow till höger blir scroll */
+            overflow-x: scroll;
+            position: relative;
+            scroll-behavior: smooth;
+            /* tar en hel bild i taget */
+            scroll-snap-type: x mandatory;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                flex-shrink: 0;
+                width: 100%;
+                height: 300px;
+                margin-right: 0px;
+                /* gör att storleken blir rätt */
+                box-sizing: border-box;
+                /* ser till att hela bilden visas korrekt vid click */
+                transform: scale(1);
+                padding: 20px;
+
+                .slide_left {
+                    position: absolute;
+                    right: 5px;
+                    top: 120px;
+                    font-size: 3rem;
+                    color: $gold-color;
+                    opacity: 0.2;
+                }
+
+                .slide_right {
+                    position: absolute;
+                    left: 5px;
+                    top: 120px;
+                    font-size: 3rem;
+                    color: $gold-color;
+                    opacity: 0.2;
+                }
+
+                /* Lyckades inte kombinera overflow hidden */
+                .bi-quote {
+                    position: absolute;
+                    right: 30px;
+                    top: 10px;
+                }
+
+                .review {
+                    margin-top: 0;
+                    width: 80%;
+                    font-size: 0.9rem;
+                }
+
+                .review_customer {
+                    position: absolute;
+                    bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+.bottom_links {
+    @include center();
+
+    span {
+        height: 10px;
+        width: 10px;
+        background-color: grey;
+        border-radius: 100%;
+        margin: 10px 10px 60px 10px;
+    }
+}
+
+/* MEDIA QUERIES - DESKTOP */
+@media screen and (min-width: 1200px) {
+    .reviews_container {
+        margin: 0 150px;
+
+        .slides {
+            display: flex;
+
+            .card {
+                height: 100%;
+                margin: 15px;
+                padding: 0 20px 20px 20px;
+
+                /* döljer pilar vid desktop res */
+                .slide_left,
+                .slide_right {
+                    display: none;
+                    visibility: hidden;
+                }
+
+                .bi-quote {
+                    display: inline-block;
+                    position: relative;
+                    top: -20px;
+                    left: -20px;
+                }
+
+                .review {
+                    margin: 0 0 20px 0;
+                }
+
+                span {
+                    width: 70px;
+                    height: 70px;
+                }
+            }
+        }
+    }
+}
