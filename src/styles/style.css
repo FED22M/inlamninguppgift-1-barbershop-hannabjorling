@@ -4,12 +4,12 @@
 /* 1. Pacering/praktiskt */
 /* 2. Design */
 /* IMPORTS */
-@import url("/src/styles/header.css");
-@import url("/src/styles/about.css");
-@import url("/src/styles/footer.css");
+@import url("/styles/header.css");
+@import url("/styles/about.css");
+@import url("/styles/footer.css");
 /* TESTER */
-@import url("/src/styles/services.css");
-@import url("/src/styles/reviews.css");
+@import url("/styles/services.css");
+@import url("/styles/reviews.css");
 /* MIXIN'S */
 /* för att addera - @include ..();*/
 /* PRIMARY COLORS */
